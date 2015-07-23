@@ -4,15 +4,17 @@ using UnityEngine.UI;
 
 public class HUDScript : MonoBehaviour
 {
-	float playerScore = 0;
+	int playerScore = 0;
+	float tmpScore = 0;
 	public Text scoreText;
 	
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	void Update()
 	{
-		playerScore += Time.deltaTime;
-		scoreText.text = ((int)(playerScore * 10)).ToString("000000");
+		tmpScore += Time.deltaTime;
+		playerScore = (int)(tmpScore*10);
+		scoreText.text = playerScore.ToString("000000");
 	}
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -26,6 +28,15 @@ public class HUDScript : MonoBehaviour
 
 	void OnDisable()
 	{
-		//PlayerPrefs.SetInt("Score", (int)(playerScore * 100));
+		PlayerPrefs.SetInt("Score", (int)(playerScore));
+
+		if(PlayerPrefs.HasKey("HighScore")){
+			int highscore = PlayerPrefs.GetInt("HighScore");
+			if(highscore < playerScore){
+				PlayerPrefs.SetInt("HighScore", (int)(playerScore));
+			}
+		}else{
+			PlayerPrefs.SetInt("HighScore", (int)(playerScore));
+		}
 	}
 }
