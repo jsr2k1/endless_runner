@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 482136}
-  - 61: {fileID: 6171174}
+  - 68: {fileID: 6828222}
   m_Layer: 0
   m_Name: PlatformBig
   m_TagString: Untagged
@@ -144,8 +144,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 482136}
   m_RootOrder: 0
---- !u!61 &6171174
-BoxCollider2D:
+--- !u!68 &6828222
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -153,8 +153,17 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: 9.64387131, y: 5.77026749}
-  m_Center: {x: .466265917, y: -.735266685}
+  m_Points:
+  - {x: -3.89416409, y: 1.85899436}
+  - {x: -3.26049876, y: 2.12714839}
+  - {x: -1.93082952, y: 2.15091753}
+  - {x: -.192588001, y: 2.25386047}
+  - {x: .694266677, y: 2.14886713}
+  - {x: 1.71650064, y: 2.23254824}
+  - {x: 2.73774838, y: 2.22766447}
+  - {x: 4.07668829, y: 2.13437343}
+  - {x: 4.7329936, y: 1.94532681}
+  - {x: 5.17747068, y: 1.48719573}
 --- !u!212 &21292616
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -35,6 +35,7 @@ namespace UnitySampleAssets._2D
             //float h = CrossPlatformInputManager.GetAxis("Horizontal");
             // Pass all parameters to the character control script.
             //character.Move(h, crouch, jump);
+
 			character.Move(1, false, jump);
             jump = false;
         }

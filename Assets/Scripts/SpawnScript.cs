@@ -11,17 +11,27 @@ public class SpawnScript : MonoBehaviour
 
 	void Start()
 	{
-		Spawn();
+		StartCoroutine(Spawn());
 	}
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	void Spawn()
+	IEnumerator Spawn()
 	{
+		while(GameManager.instance.state == GameManager.States.PAUSE){
+			yield return null;
+		}
 		int rand_num = Random.Range(0, obj.Length);
 		float randomY = Random.Range(0.0f, 2.0f);
 		Vector3 newPos = new Vector3(transform.position.x, transform.position.y+randomY, transform.position.z);
 		Instantiate(obj[rand_num], newPos, Quaternion.identity);
-		Invoke("Spawn", mult);
+
+		yield return new WaitForSeconds(mult);
+		StartCoroutine(Spawn());
 	}
 }
+
+
+
+
+
