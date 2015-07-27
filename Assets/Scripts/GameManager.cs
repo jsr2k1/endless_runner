@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 	public enum States{
 		RUN,
 		PAUSE,
+		GAMEOVER
 	};
 	States m_state;
 	public States state{

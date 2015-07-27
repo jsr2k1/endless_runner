@@ -18,7 +18,7 @@ public class SpawnScript : MonoBehaviour
 
 	IEnumerator Spawn()
 	{
-		while(GameManager.instance.state == GameManager.States.PAUSE){
+		while(GameManager.instance.state != GameManager.States.RUN){
 			yield return null;
 		}
 		int rand_num = Random.Range(0, obj.Length);

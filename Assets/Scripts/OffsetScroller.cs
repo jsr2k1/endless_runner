@@ -18,7 +18,7 @@ public class OffsetScroller : MonoBehaviour
 	
 	void Update()
 	{
-		if(GameManager.instance.state == GameManager.States.PAUSE){
+		if(GameManager.instance.state != GameManager.States.RUN){
 			return;
 		}
 		float x = Mathf.Repeat(Time.time * scrollSpeed * mult, 1);

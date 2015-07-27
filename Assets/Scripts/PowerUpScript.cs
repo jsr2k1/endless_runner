@@ -3,12 +3,12 @@ using System.Collections;
 
 public class PowerUpScript : MonoBehaviour
 {
-	HUDScript hud;
+	UIManager hud;
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if(other.tag == "Player"){
-			hud = GameObject.Find("Main Camera").GetComponent<HUDScript>(); //TODO: Not efficient!
+			hud = GameObject.Find("Main Camera").GetComponent<UIManager>(); //TODO: Not efficient!
 			hud.IncreaseScore(10);
 			Destroy(this.gameObject);
 		}

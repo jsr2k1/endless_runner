@@ -56,7 +56,7 @@ namespace UnitySampleAssets._2D
 
 		void GameStateChanged()
 		{
-			if(GameManager.instance.state == GameManager.States.PAUSE){
+			if(GameManager.instance.state != GameManager.States.RUN){
 				freezePosition = transform.position;
 				freezeVelocity = rigidbody2D.velocity;
 				bFrozen = true;
