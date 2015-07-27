@@ -88,7 +88,7 @@ public class UIManager : MonoBehaviour
 	
 	public void OnRetryButtonPressed()
 	{
-		Application.LoadLevel("01 MainScene");
+		Application.LoadLevel(Application.loadedLevel);
 	}
 	
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -111,7 +111,7 @@ public class UIManager : MonoBehaviour
 	
 	public void OnExitButtonPressed()
 	{
-		Application.LoadLevel("00 Menu");
+		Application.LoadLevel("01 Map");
 	}
 }
 

@@ -58,7 +58,7 @@ GameObject:
   - 4: {fileID: 482136}
   - 68: {fileID: 6862360}
   m_Layer: 0
-  m_Name: PlatformMedium
+  m_Name: PlatformMedium01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
